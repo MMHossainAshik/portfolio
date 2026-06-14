@@ -24,11 +24,11 @@ export default function HomePage() {
 
   // Define Socials (fallback to defaults if not in DB)
   const socials = data?.socials || { 
-    github: '#', 
-    linkedin: '#', 
-    facebook: '#',        // Added
-    youtube: '#',         // Added
-    email: 'mailto:hello@example.com' 
+    github: 'https://github.com/MMHossainAshik', 
+    linkedin: 'https://www.linkedin.com/in/md-mozammal-hossain-ashik/', 
+    //facebook: '#',        // Added
+    //youtube: '#',         // Added
+    email: 'mailto:mmhossainashik@gmail.com' 
   };
 
   if (loading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
@@ -52,19 +52,19 @@ export default function HomePage() {
               
               <EditableText 
                 collection="pages" docId="home" fieldPath="heroName" 
-                value={data?.heroName || 'Abdullah Al Mazid'} tag="h1" 
+                value={data?.heroName || 'Md Mozammal Hossain Ashik'} tag="h1" 
                 className="text-5xl md:text-7xl font-bold text-[var(--text-primary)] leading-tight" 
               />
               
               <EditableText 
                 collection="pages" docId="home" fieldPath="heroTagline" 
-                value={data?.heroTagline || 'Full Stack Developer & Designer'} tag="p" 
+                value={data?.heroTagline || 'Mechanical Engineering Student'} tag="p" 
                 className="text-xl md:text-2xl text-[var(--text-secondary)] mt-4" 
               />
               
               <EditableText 
                 collection="pages" docId="home" fieldPath="heroDescription" 
-                value={data?.heroDescription || 'I build modern web applications with passion and precision.'} tag="p" 
+                value={data?.heroDescription || 'I am a student and aspiring engineer passionate about AI, IoT, and intelligent system design. I enjoy building real-world solutions by combining deep learning, embedded systems, and modern web technologies.'} tag="p" 
                 className="text-[var(--text-secondary)] mt-6 max-w-lg leading-relaxed" multiline 
               />
 

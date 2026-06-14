@@ -74,11 +74,11 @@ export default function Navbar() {
               {editMode ? (
                 <EditableText
                   collection="settings" docId="navbar" fieldPath="brandName"
-                  initialValue={nav?.brandName || 'Abdullah.'}
+                  initialValue={nav?.brandName || 'Ashik'}
                   tag="span"
                 />
               ) : (
-                <span>{nav?.brandName || 'Abdullah.'}</span>
+                <span>{nav?.brandName || 'Ashik'}</span>
               )}
               {/* Accent dot */}
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mb-3 shrink-0" />

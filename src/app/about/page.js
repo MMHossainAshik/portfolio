@@ -49,7 +49,7 @@ export default function AboutPage() {
                   collection="pages" 
                   docId="about" 
                   fieldPath="bioTitle" 
-                  value={data?.bioTitle || 'Who am I?'} 
+                  value={data?.bioTitle || 'Who am I?'}
                   tag="h2" 
                   className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--text-primary)] leading-tight" 
                 />
@@ -61,7 +61,7 @@ export default function AboutPage() {
                   collection="pages" 
                   docId="about" 
                   fieldPath="bio" 
-                  value={data?.bio || 'Bio...'} 
+                  value={data?.bio || 'I am Ashik, a final year Mechanical Engineering student at BUET with a CGPA of 3.63/4.00 and Dean\'s List recognition. My research spans computational cardiac mechanics, thermal energy storage and CFD. I have presented at ICME 2025, ASHRAE Annual Conference 2026, and received the Best Paper Award at ICSASD 2026.'} 
                   tag="div" 
                   className="
                     prose prose-lg md:prose-xl dark:prose-invert max-w-none
