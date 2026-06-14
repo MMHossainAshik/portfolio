@@ -9,7 +9,7 @@ import { SiteConfigProvider } from '@/context/SiteConfigContext';
 import { ThemeProvider } from '@/context/ThemeContext'; // Import the new provider
 import { Toaster } from 'react-hot-toast';
 import './globals.css';
-
+export const dynamic = 'force-dynamic'; //added because claude said so
 export const metadata = { title: "Ashik's Portfolio",
                           description: 'Mechanical Engineering Student at BUET',
                           icons: {
