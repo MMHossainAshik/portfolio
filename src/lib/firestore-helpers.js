@@ -23,10 +23,17 @@ export function useColl(name) {
   useEffect(() => {
     setLoading(true);
     const q = query(collection(db, name), orderBy('createdAt', 'desc'));
-    const unsub = onSnapshot(q, (snap) => {
-      setItems(snap.docs.map(d => ({ id: d.id, ...d.data() })));
-      setLoading(false);
-    });
+    const unsub = onSnapshot(q, 
+      (snap) => {
+        console.log('Firebase read success:', name, snap.docs.length, 'docs');
+        setItems(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+        setLoading(false);
+      },
+      (error) => {
+        console.log('Firebase read ERROR:', name, error.message);
+        setLoading(false);
+      }
+    );
     return () => unsub();
   }, [name]);
   return { items, loading };
